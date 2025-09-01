@@ -1,0 +1,30 @@
+div {
+    text-align: center;
+    font-size: 30px;
+
+
+    .derecha{
+        float: right;
+    }
+
+}
+
+
+h1 {
+  color: black;   
+  text-align: center;
+}
+
+form { 
+
+     text-align: center;
+    }
+    
+
+form input {
+  margin-top: 5px;
+  width: 40%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 100px;
+}
