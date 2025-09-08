@@ -1,20 +1,48 @@
 h1 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+.imagen {
+    width: 470px;
+    margin: 0 15px 15px 0;
+    border-radius: 10px;
+    border: 3px solid #ccc;
     text-align: center;
 }
+main {
+    float: right;
+    width: 40%;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    background: #ccc;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    overflow: auto;
+    padding-right: 15px;
 
-
-p {
-    margin-bottom: 0cap;
-    text-align: end;
 }
 
-
-h2 {
-text-align: end;
-color: black;
+.ficha {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
-ul {
-    text-align: end;
 
+.ficha li{
+    line-height: 1.5;
+    margin: 8px 0;
+    display: block;
+}
+
+.ficha .label {
+    text-decoration: underline;
+    color: rgb(11, 11, 226);
+    display: inline;
+    min-width: 160px;
 
 }

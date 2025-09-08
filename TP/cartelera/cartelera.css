@@ -16,8 +16,12 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
+    border: 2px solid white;
 }
 
 .pelicula p {
     font-size: 14px;
 }
+
+
+
