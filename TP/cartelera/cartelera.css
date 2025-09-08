@@ -1,0 +1,23 @@
+.fotos-peliculas {
+    margin-top: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    text-align: center; 
+}
+
+.pelicula {
+    display: inline-block;
+    width: 22%;            
+    margin: 10px;        
+    text-align: center;
+}
+
+.pelicula img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.pelicula p {
+    font-size: 14px;
+}
