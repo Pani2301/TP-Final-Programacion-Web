@@ -4,6 +4,8 @@ body {
     
     /* 🎬 Fondo azul oscuro fachero */
     background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #0f3460, #16213e);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 a {

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUBA - Panel Admin</title>
+    <link rel="stylesheet" href="../../main.css"> <!-- usa el estilo general -->
+    <link rel="stylesheet" href="admin.css">   <!-- estilos específicos -->
+</head>
+<body>
+
+    <!-- HEADER igual que usuario -->
+    <header>
+        <nav class="menu">
+            <ul>
+                <li class="logo-ruba">
+                    <a href="../../USUARIO/cartelera/cartelera.html">
+                        <img src="../../fotos/logo RUBA.png" alt="Logo RUBA">
+                    </a>
+                </li>
+            </ul>
+            <div class="center">ADMINISTRADOR - RUBA</div>
+            <ul>
+                <li class="logo">
+                    <a href="../../USUARIO/perfil/menu-perfil.html">
+                        <img src="../../fotos/foto perfil.jpg" alt="foto admin">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Panel de Administración</h1>
+
+    <div class="dashboard">
+        <!-- Resumen Películas -->
+        <section class="card">
+            <h2>Películas</h2>
+            <p>Total cargadas: <strong>12</strong></p>
+            <p>En cartelera: <strong>8</strong></p>
+            <p>Próximos estrenos: <strong>4</strong></p>
+        </section>
+
+        <!-- Resumen Usuarios -->
+        <section class="card">
+            <h2>Usuarios</h2>
+            <p>Registrados: <strong>250</strong></p>
+        </section>
+
+        <!-- Reportes -->
+        <section class="card">
+            <h2>Foro de consultas</h2>
+            <button><a href="../consultas/consultas.html" target="_blank">ACCEDER A CONSULTAS DE USUARIOS</a></button>
+        </section>
+
+        <!-- Accesos rápidos -->
+
+        <div class="card">
+            <h2>Accesos</h2>
+            <button><a href="../accesos/admin-pelis.html" target="_blank">ADMINISTRAR PELICULAS</a></button>
+            <button><a href="../accesos/admin-usuarios.html" target="_blank">ADMINISTRAR USUARIOS</a></button>
+        </div>
+    </div>
+
+</body>
+</html>
