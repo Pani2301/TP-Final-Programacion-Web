@@ -1,5 +1,9 @@
 body {
-    background-color: rgb(59, 76, 121);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+    /* 🎬 Fondo azul oscuro fachero */
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #0f3460, #16213e);
 }
 
 a {
@@ -7,26 +11,42 @@ a {
     color: black;
 }
 
-header{
-    background-color: white;
+header {
+    background-color: rgb(242, 234, 216);
     border-radius: 15px;
+    margin: 10px;
 }
 
 h1 {
     text-align: center;
-    padding: 30px;
+    padding: 50px;
 }
 
-.menu{
+.menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* ✅ responsive */
 }
 
-.menu ul{
-    list-style-type: none;
-    font-size: 30px;
-    margin: 0px;
+.menu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.center {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    color: black;
 }
 
 .logo img {
@@ -34,4 +54,23 @@ h1 {
     height: auto;
     display: block;
     margin: 10px;
+    border-radius: 50%;
+}
+
+/* 🎬 Logo RUBA a la izquierda */
+.logo-ruba img {
+    width: 60px;   /* tamaño del logo */
+    height: auto;
+    display: block;
+    margin: 10px;
+}
+
+/* Hover general en links */
+.menu a:hover {
+    color: #0f3460;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
 }
