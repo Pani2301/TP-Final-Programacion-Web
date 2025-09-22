@@ -76,3 +76,10 @@ h1 {
 ul {
     list-style-type: none;
 }
+
+footer {
+    margin-top: 500px;
+    background-color: black;
+    padding: 50px;
+    color: white;
+}
