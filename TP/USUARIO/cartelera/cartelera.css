@@ -34,7 +34,6 @@ h1 {
     transform: scale(1.1);;
 }
 
-/* 📱 Responsive ajustes */
 @media (max-width: 992px) {
     .fotos-peliculas {
         grid-template-columns: 1fr 1fr 1fr; /* ✅ 3 columnas en tablets */

@@ -1,98 +1,163 @@
 h1 {
-    font-size: 40px;
-    color: white;
+  font-size: 40px;
+  color: white;
 }
 
-
+h2 { 
+  text-decoration: underline; 
+}
 
 main {
-    float: left ;
-    width: 90%;
-    color:white; 
-    margin: 20px;
-    padding: 0px;
-    background: transparent;
-    border: 2px solid transparent;
-    border-radius: 12px;
-    
-   
-
+  float: left;
+  width: 90%;
+  color: white;
+  margin: 20px;
+  padding: 0px;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 12px;
 }
-h2 {
-    text-decoration: underline;
+
+button {
+  background-color: red;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 120px;
+  cursor: pointer;
+}
+
+button:hover { 
+  transform: scale(1.1); 
+}
+
+button a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
 
 .ficha {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
 .ficha li{
-    line-height: 1.5;
-    margin: 8px 0;
-    display: block;
+  line-height: 1.5;
+  margin: 8px 0;
+  display: block;
 }
 
 .ficha .label {
-    text-decoration: underline;
-    display: inline;
-    min-width: 160px;
-
+  text-decoration: underline;
+  display: inline;
+  min-width: 160px;
 }
 
-
-#boton {
-    background-color: red;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 15px 40px;
-    border: none;
-    border-radius: 120px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 390px;
-    
-    
-}
-#boton:hover {
-    transform: scale(1.1);
-}
 .boton-contenedor {
-  display: flex;             
-  justify-content: center;    
-  margin: 20px 0;             
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 #contenedor{
   display: flex;
-  align-items: flex-start;   
+  align-items: flex-start;
   justify-content: space-between;
   gap: 32px;
   margin: 20px;
 }
 
-
 .yt{
-  flex: 1 1 560px;           
+  flex: 1 1 560px;
   max-width: 720px;
 }
 .yt iframe{
   width: 100%;
-  aspect-ratio: 16 / 9;      
+  aspect-ratio: 16 / 9;
   display: block;
   border: 0;
   border-radius: 14px;
   box-shadow: 0 8px 18px rgba(0,0,0,.35);
 }
 
-
 .poster{
-  flex: 0 0 320px;           
-  height: 410px;             
-  object-fit: cover;         
+  flex: 0 0 320px;
+  height: 410px;
+  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 8px 18px rgba(0,0,0,.35);
   display: block;
+}
+
+/* ====== RESPONSIVE ====== */
+
+/* Tablet grande / notebook */
+@media (max-width: 1024px){
+  /* botón menos corrido a la derecha */
+  #boton { margin-left: 0; }
+  .boton-contenedor { justify-content: center; }
+
+  /* que el poster no sea tan alto */
+  .poster { flex-basis: 280px; height: 380px; }
+}
+
+/* Tablet / móvil grande */
+@media (max-width: 900px){
+  /* La fila video+poster se apila y se centra */
+  #contenedor{
+    flex-direction: column;
+    align-items: center;     /* centramos los hijos */
+    gap: 20px;
+  }
+
+  .yt{ max-width: 100%; width: 100%; }
+  .yt iframe{ border-radius: 12px; }
+
+  .poster{
+    width: 100%;
+    max-width: 480px;       /* límite razonable */
+    height: auto;           /* que no deforme */
+  }
+
+  /* El main deja de flotar y ocupa todo el ancho */
+  main{
+    float: none;
+    width: 100%;
+    margin: 16px 0;
+  }
+
+  /* Título más chico para pantallas medianas */
+  h1 { font-size: 32px; }
+}
+
+/* Móvil chico */
+@media (max-width: 600px){
+  /* márgenes más compactos */
+  #contenedor { margin: 12px; gap: 16px; }
+
+  /* video mantiene 16:9 y ocupa el ancho */
+  .yt { width: 100%; }
+  .yt iframe { width: 100%; aspect-ratio: 16 / 9; }
+
+  /* poster al 100% */
+  .poster{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* botón full-width si querés (opcional) */
+  /* #boton { width: 100%; } */
+
+  /* título aún más compacto */
+  h1 { font-size: 26px; }
+}
+
+/* Ultra-pequeño (opcional) */
+@media (max-width: 380px){
+  h1 { font-size: 22px; }
 }

@@ -1,59 +1,56 @@
+a {
+    color: white;
+}
+
 h1 {
     color: yellow;
     margin-top: 30px;
 }
 
 /* Contenedor principal tipo grid */
-.dashboard {
+.cuadrado {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
-    margin: 30px auto;
+    margin: auto;
     max-width: 1200px;
     padding: 20px;
 }
 
-/* Tarjetas del dashboard */
-.card {
+.panel {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-.card h2 {
+.panel h2 {
     margin-top: 0;
-    color: #0f3460;
 }
 
-.card button {
-    display: block;
-    margin: 10px 0;
-    padding: 12px 18px;
+.panel button {
     background-color: red;
     color: white;
+    display: block;
+    margin: 10px;
+    padding: 15px;
     font-weight: bold;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease;
 }
 
-.card button:hover {
-    transform: scale(1.05);
+.panel button:hover {
+    transform: scale(1.1);
 }
 
-/* 📱 Responsive */
 @media (max-width: 768px) {
-    .dashboard {
-        grid-template-columns: 1fr;
+    .cuadrado {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
-
-a {
-    color: white;
+@media (max-width: 425px) {
+    .cuadrado {
+        grid-template-columns: 1fr;
+    }
 }
-
-
-
