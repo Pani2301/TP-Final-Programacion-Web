@@ -1,97 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRAR PELICULAS</title>
-    <link rel="stylesheet" href="../../main.css">
-    <link rel="stylesheet" href="../../USUARIO/cartelera/cartelera.css">
-    <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADMINISTRAR PELICULAS</title>
+
+  <!-- CSS existentes -->
+  <link rel="stylesheet" href="../../main.css" />
+  <link rel="stylesheet" href="../../USUARIO/cartelera/cartelera.css" />
+
+  <!-- CSS del admin -->
+  <link rel="stylesheet" href="admin2.css" />
+
+  <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon" />
 </head>
 <body>
-    <header>
-        <nav class="menu">
-            <ul>
-                <li class="logo-ruba">
-                    <a href="../../USUARIO/cartelera/cartelera.html">
-                        <img src="../../fotos/logo RUBA.png" alt="Logo RUBA">
-                    </a>
-                </li>
-            </ul>
-            <div class="center">ADMINISTRADOR - RUBA</div>
-            <ul>
-                <li class="logo">
-                    <a href="../../USUARIO/perfil/menu-perfil.html">
-                        <img src="../../fotos/foto perfil.jpg" alt="foto admin">
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav class="menu">
+      <ul>
+        <li class="logo-ruba">
+          <a href="../../USUARIO/cartelera/cartelera.html">
+            <img src="../../fotos/logo RUBA.png" alt="Logo RUBA" />
+          </a>
+        </li>
+      </ul>
+      <div class="center">ADMINISTRADOR - RUBA</div>
+      <ul>
+        <li class="logo">
+          <a href="../../USUARIO/perfil/menu-perfil.html">
+            <img src="../../fotos/foto perfil.jpg" alt="foto admin" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <h1>CARTELERA - ADMIN</h1>
-    
-    <div class="fotos-peliculas">
+  <h1>CARTELERA - ADMIN</h1>
 
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo1.jpg" alt="El Conjuro 4">
-                <p>El Conjuro 4</p>
-            </div>
+  <!-- Acciones admin -->
+  <section class="admin-actions">
+    <a href="agregar.html" class="btn-add" id="btnIrAgregar">
+      <span class="icon">➕</span> Agregar película
+    </a>
+    <span class="contador" id="contador">0/8</span>
+  </section>
 
-
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo2.jpg" alt="Cómo entrenar a tu dragón">
-                <p>Cómo entrenar a tu dragón</p>
-            </div>
-
-
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo3.jpg" alt="F1 La Película">
-                <p>F1 La Película</p>
-            </div>
-
-
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo4.jpg" alt="Jurassic World Renace">
-                <p>Jurassic World Renace</p>
-            </div>
-
-
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo5.jpg" alt="Superman">
-                <p>Superman</p>
-            </div>
-
-    
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo6.jpg" alt="Haz que regrese">
-                <p>Haz que regrese</p>
-            </div>
-
-    
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo7.jpg" alt="Nadie 2">
-                <p>Nadie 2</p>
-            </div>
-
-    
-
-            <div class="pelicula">
-                <img src="../../fotos/foto-titulo8.jpg" alt="La hora de la desaparición">
-                <p>La hora de la desaparición</p>
-            </div>
-
+  <!-- Grilla existente (copiada tal cual) -->
+  <div class="fotos-peliculas">
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo1.jpg" alt="El Conjuro 4" />
+      <p>El Conjuro 4</p>
     </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo2.jpg" alt="Cómo entrenar a tu dragón" />
+      <p>Cómo entrenar a tu dragón</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo3.jpg" alt="F1 La Película" />
+      <p>F1 La Película</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo4.jpg" alt="Jurassic World Renace" />
+      <p>Jurassic World Renace</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo5.jpg" alt="Superman" />
+      <p>Superman</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo6.jpg" alt="Haz que regrese" />
+      <p>Haz que regrese</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo7.jpg" alt="Nadie 2" />
+      <p>Nadie 2</p>
+    </div>
+    <div class="pelicula">
+      <img src="../../fotos/foto-titulo8.jpg" alt="La hora de la desaparición" />
+      <p>La hora de la desaparición</p>
+    </div>
+  </div>
 
-    <footer>
-        <p>2025 RUBA. Todos los derechos reservados.</p>
-    </footer>
+  <footer>
+    <p>2025 RUBA. Todos los derechos reservados.</p>
+  </footer>
 
+  <div class="toast" id="toast" hidden>✅ Película agregada</div>
+
+  
+  <script src="admin.js"></script>
 </body>
 </html>

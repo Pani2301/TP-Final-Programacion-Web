@@ -21,132 +21,158 @@
             </ul>
         
             <div class="center">RUBA</div>
-        
+
             <ul>
                 <li class="logo">
-                    <a href="../../USUARIO/perfil/menu-perfil.html">
-                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil">
-                    </a>
+                    <div class="menu-desplegable">         
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="myFunction()"class="dropbtn">
+                        <div id="myDropdown" class="contenido-menu">
+                            <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
+                            <a href="../perfil/Registro.html">Registrarse</a>
+                            <a href="../perfil/Miperfil.html">Mi perfil </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
     </header>
 
-    
     <main class="sala">
-    <h2>Sala de Cine</h2>
+        <h2>Sala de Cine</h2>
 
-    <div class="pantalla">Pantalla</div>
+        <div class="recuadro">Pantalla</div>
 
-    <li>Butaca libre</li>
-    <li>Butaca reservada</li>
-    <li>Butaca seleccionada</li>
-    
-    <div class="butacas">
+        <div class="seleccionar-fehca-hora">
+            <h3>Elegí fecha y horario</h3>
+            <label for="fecha">Fecha:</label>
+            <select id="fecha">
+                <option value="">-- Seleccionar fecha --</option>
+                <option value="2025-10-06">Lunes 6/10</option>
+                <option value="2025-10-07">Martes 7/10</option>
+                <option value="2025-10-08">Miércoles 8/10</option>
+            </select>
 
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-
-
+        <label for="hora">Horario:</label>
+            <select id="hora">
+                <option value="">-- Seleccionar horario --</option>
+                <option value="18:00">18:00</option>
+                <option value="20:30">20:30</option>
+                <option value="22:45">22:45</option>
+        </select>
         </div>
 
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
+        
+        <div class="butacas">
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
 
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
+
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
+
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
+
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
+
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
+
+            <div class="fila">
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+                <div class="butaca"></div>
+            </div>
         </div>
 
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
+        <div class="confirmar-seleccion">
+            <button class="confirmar">Confirmar Selección</button>
         </div>
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-        </div>
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-        </div>
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-        </div>
-        <div class="fila">
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-            <div class="butaca"></div>
-        </div>
-    </div>
     </main>
 
     <footer>
         <p>2025 RUBA. Todos los derechos reservados.</p>
     </footer>
     
+    <script src="sala.js"></script>
+    <script src="../../main.js"></script>
 </body>
 </html>

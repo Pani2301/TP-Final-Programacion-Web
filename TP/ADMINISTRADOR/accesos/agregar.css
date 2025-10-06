@@ -1,0 +1,41 @@
+.wrap{
+  max-width: 820px;
+  margin: 40px auto;
+  padding: 0 16px;
+  color:#fff;
+}
+h1{ text-align:center; margin-bottom: 16px; }
+
+.card{
+  background: rgba(255,255,255,.06);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+label{ display:flex; flex-direction:column; gap:6px; }
+input, textarea{
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #111;
+}
+
+.actions{
+  display:flex; justify-content: flex-end; gap: 10px; margin-top: 6px;
+}
+.btn{
+  background: linear-gradient(135deg,#4facfe,#00f2fe);
+  color:#fff; border:0; border-radius: 10px;
+  padding: 10px 16px; font-weight:800; cursor:pointer;
+  text-decoration:none; display:inline-block;
+}
+.btn.ghost{
+  background: transparent; border:1px solid rgba(255,255,255,.4);
+  color:#fff;
+}
+.btn:hover{ filter: brightness(1.05); }

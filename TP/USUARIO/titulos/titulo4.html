@@ -21,20 +21,25 @@
             </ul>
         
             <div class="center">RUBA</div>
-        
+
             <ul>
                 <li class="logo">
-                    <a href="../../USUARIO/perfil/menu-perfil.html">
-                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil">
-                    </a>
+                    <div class="menu-desplegable">         
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="myFunction()"class="dropbtn">
+                        <div id="myDropdown" class="contenido-menu">
+                            <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
+                            <a href="../perfil/Registro.html">Registrarse</a>
+                            <a href="../perfil/Miperfil.html">Mi perfil </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
     </header>
 
     <h1>Jurassic World: Renace (2025)</h1>
-    <div class="botton-contenedor">
-        <button id="boton"><a href="../sala cine/sala.html" target="_blank">SACAR ENTRADAS</a></button>
+    <div class="boton-contenedor">
+        <button><a href="../sala cine/sala.html" target="_blank">SACAR ENTRADAS</a></button>
     </div>
     
     <div id="contenedor">
@@ -63,6 +68,6 @@
     <footer>
         <p>2025 RUBA. Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../../main.js"></script>
 </body>
 </html>

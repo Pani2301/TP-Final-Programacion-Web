@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agregar película - RUBA</title>
+
+  <!-- Podés reutilizar main.css para tipografías y fondo -->
+  <link rel="stylesheet" href="../../main.css"/>
+  <link rel="stylesheet" href="agregar.css"/>
+  <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Agregar película</h1>
+
+    <form id="formAgregar" class="card">
+      <label>Título
+        <input type="text" id="titulo" required placeholder="Ej: El Conjuro 4"/>
+      </label>
+
+      <label>URL de imagen (jpg/png)
+        <input type="url" id="imagen" required placeholder="../../fotos/foto-titulo9.jpg"/>
+      </label>
+
+      <label>Resumen
+        <textarea id="resumen" rows="4" placeholder="Breve sinopsis..."></textarea>
+      </label>
+
+      <label>Link trailer (YouTube / embed)
+        <input type="url" id="trailer" placeholder="https://www.youtube.com/embed/xxxxx"/>
+      </label>
+
+      <div class="actions">
+        <a class="btn ghost" href="admin-pelis.html">Cancelar</a>
+        <button class="btn" type="submit">Guardar y volver</button>
+      </div>
+    </form>
+  </main>
+
+
+</body>
+</html>
