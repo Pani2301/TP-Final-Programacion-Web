@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html: agregar.html. <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -14,13 +14,16 @@
   <main class="wrap">
     <h1>Agregar película</h1>
 
-    <form id="formAgregar" class="card">
+    <!-- 👇 MUY IMPORTANTE: novalidate para que no salte la validación del navegador -->
+    <form id="formAgregar" class="card" novalidate>
       <label>Título
-        <input type="text" id="titulo" required placeholder="Ej: El Conjuro 4"/>
+        <!-- quitamos required; lo validás con JS -->
+        <input type="text" id="titulo" placeholder="Ej: El Conjuro 4"/>
       </label>
 
       <label>URL de imagen (jpg/png)
-        <input type="url" id="imagen" required placeholder="../../fotos/foto-titulo9.jpg"/>
+        <!-- cambiamos url -> text para evitar el globito -->
+        <input type="text" id="imagen" placeholder="../../fotos/foto-titulo9.jpg"/>
       </label>
 
       <label>Resumen
@@ -28,7 +31,8 @@
       </label>
 
       <label>Link trailer (YouTube / embed)
-        <input type="url" id="trailer" placeholder="https://www.youtube.com/embed/xxxxx"/>
+        <!-- cambiamos url -> text para evitar el globito -->
+        <input type="text" id="trailer" placeholder="https://www.youtube.com/embed/xxxxx"/>
       </label>
 
       <div class="actions">
@@ -38,6 +42,6 @@
     </form>
   </main>
 
-
+  <script src="agregar.js"></script>
 </body>
 </html>

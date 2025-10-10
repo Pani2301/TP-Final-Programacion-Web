@@ -9,7 +9,6 @@
     <title>Iniciar Sesion</title>
 </head>
 <body>
-
     <header>
         <nav class="menu">
             <ul>
@@ -40,34 +39,26 @@
     <h2>Inicio De sesion</h2>
 
    <div class="centrar">
-        <form action="">
+        <form name="formInicioSesion" onsubmit="return validarInicioSesion()">
             <fieldset class="bordeo">
-            <div>
-                <div>
-                    <label  for="nom">Email:</label>
-                </div>
-                
-                    <input  type="text" name="nombre" id="nom01" >
+            <div class="campo">
+                <label  for="nom">Email:</label>
+                <input  type="text" name="nombre" id="nom01" >
             </div>
-            <div>
 
-            <div >
-                <div>
-                    <label  for="nom">Contraseña:</label>
-                </div>
-                
-                    <input  type="password" name="nombre" id="nom01" >
-                
+            <div class="campo">
+                <label  for="nom">Contraseña:</label>
+                <input  type="password" name="nombre" id="nom01" >    
             </div>
+
             </fieldset>
 
- <div > 
-                <fieldset class="bordeo2">
-                                  
-                        <input type="submit"  value="Enviar">
-                        <input type="reset" value="Cancelar">
-                </fieldset> 
-            </div>
+        <div > 
+            <fieldset class="bordeo2">                      
+                <input type="submit"  value="Enviar">
+                <input type="reset" value="Cancelar">
+            </fieldset> 
+        </div>
 
 
     <footer>
@@ -75,5 +66,6 @@
     </footer>
 
     <script src="../../main.js"></script>
+    <script src="validar-inicio.js"></script>
 </body>
 </html>

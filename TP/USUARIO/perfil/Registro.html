@@ -9,7 +9,6 @@
     <title>REGISTRO</title>
 </head>
 <body> 
-
     <header>
         <nav class="menu">
             <ul>
@@ -40,72 +39,56 @@
    <h2>REGISTRO</h2> 
     <P></P> 
     <div class="centrar">
-        <form action="">
+        <form name="formRegistro" onsubmit="return validarRegistro()">
             <fieldset class="bordeo">
-            <div >
-                <div>
-                    <label  for="nom">Nombre:</label>
-                </div>
-                
-                    <input  type="text" name="nombre" id="nom01" >
-                
+            <div>
+                <label  for="nom">Nombre: </label>
+                <input  type="text" name="nombre" id="nom01" >
             </div>
 
 
             <div>
-                <div>
-                    <label for="ape">Apellido:</label>
-                </div>
-               
-              <input type="text" name="apellido" id="ape01" >
-                
-             </div>
+                <label for="ape">Apellido: </label>
+                <input type="text" name="apellido" id="ape01" >
+            </div>
 
-             <div>
-                <div>
-                    <label for="con">Contraseña:</label>
-                </div>
+
+            <div>
+                <label for="con">Contraseña: </label>
                 <input type="password" name="contrasena" id="con" >
-             </div>
+            </div>
 
 
             <div>
-                <div>
-                    <label for="fch01">Fecha De Nacimiento:</label>
-                </div>
-                <div>
-                    <input type="date" id="fecha" name="fch01" title="Ingrese la fecha de nacimiento" placeholder="YYYY-MM-DD" />
-                </div>
+                <label for="fch01">Fecha De Nacimiento: </label>
+                <input type="date" id="fecha" name="fch01" title="Ingrese la fecha de nacimiento" placeholder="YYYY-MM-DD" />
             </div>
 
+
             <div>
-                <div>
-                    <label for="Correo Electronico">Correo Electronico:</label>
-                </div>
-                    <input type="text" name="correo" id="correo01" >
+                <label for="Correo Electronico">Correo Electronico: </label>
+                <input type="text" name="correo" id="correo01" >
             </div>
-</fieldset>
+
+            </fieldset>
 
 
             <div> 
-                <fieldset class="bordeo2">
-                                  
-                        <input type="submit"  value="Enviar">
-                        <input type="reset" value="Cancelar">
+                <fieldset class="bordeo2">      
+                    <input type="submit"  value="Enviar">
+                    <input type="reset" value="Cancelar">
                 </fieldset> 
             </div>
 
-        </form>
+        </form> 
     </div>
-
-    
     </body>
-
 
     <footer>
         <p>2025 RUBA. Todos los derechos reservados.</p>
     </footer>
 
     <script src="../../main.js"></script>
+    <script src="validar-registro.js"></script>
 </body>
 </html>

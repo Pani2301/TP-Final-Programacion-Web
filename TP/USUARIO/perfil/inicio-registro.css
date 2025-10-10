@@ -16,7 +16,7 @@
     padding: 10px;
     margin: auto;
     margin-top: 10px;
-   background-color: #1e1e2f;
+    background-color: #1e1e2f;
     color: white;
     border-radius: 20px;
 }
@@ -30,4 +30,22 @@ h2 {
     text-align: center;
     margin-top: 20px;
     color: white;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
