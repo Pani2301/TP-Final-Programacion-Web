@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCEDER A CONSULTAS DE USUARIOS</title>
+    <title>Sala de Cine</title>
     <link rel="stylesheet" href="../../main.css">
-    <link rel="stylesheet" href="consultas.css">
+    <link rel="stylesheet" href="seleccionar.css">
     <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon">
 </head>
 <body>
@@ -36,33 +36,40 @@
         </nav>
     </header>
 
-    <h1>CONSULTAS DE LOS USUARIOS</h1>
+    <div class="sala">
+        <h2>Sala de Cine</h2>
 
-    <div class="consulta">
-        <h3>Consulta de Usuario 1</h3>
-        <p><strong>Nombre:</strong> Juan Pérez</p>
-        <p><strong>Email:</strong> juanperez@example.com</p>
-        <button class="ver">Ver</button>
+        <div class="recuadro">Pantalla</div>
+
+        <div class="seleccionar-fecha-hora">
+            <h3>Elegí fecha y horario</h3>
+            <form name="formFechaHora" onsubmit="return validarFormularioFechayHora()">
+                <label for="fecha">Fecha:</label>
+                <select id="fecha">
+                    <option value="">-- Seleccionar fecha --</option>
+                    <option value="2025-10-06">Lunes 6/10</option>
+                    <option value="2025-10-07">Martes 7/10</option>
+                    <option value="2025-10-08">Miércoles 8/10</option>
+                </select>
+
+                <label for="hora">Horario:</label>
+                <select id="hora">
+                    <option value="">-- Seleccionar horario --</option>
+                    <option value="18:00">18:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="22:45">22:45</option>
+                </select>
+
+                <button type="submit">Ir a sala</button>
+            </form>
+        </div>
     </div>
 
-    <div class="consulta">
-        <h3>Consulta de Usuario 2</h3>
-        <p><strong>Nombre:</strong> María Gómez</p>
-        <p><strong>Email:</strong> mariag@example.com</p>
-        <button class="ver">Ver</button>
-    </div>
-
-    <div class="consulta">
-        <h3>Consulta de Usuario 3</h3>
-        <p><strong>Nombre:</strong> Carlos Díaz</p>
-        <p><strong>Email:</strong> carlosd@example.com</p>
-        <button class="ver">Ver</button>
-    </div>
-    
     <footer>
         <p>2025 RUBA. Todos los derechos reservados.</p>
     </footer>
-
-<script src="main.js"></script>
+    
+    <script src="seleccionar.js"></script>
+    <script src="../../main.js"></script>
 </body>
 </html>

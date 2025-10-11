@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon">
 </head>
 <body>
-
-    <!-- HEADER igual que usuario -->
     <header>
         <nav class="menu">
             <ul>
@@ -20,12 +18,19 @@
                     </a>
                 </li>
             </ul>
-            <div class="center">ADMINISTRADOR - RUBA</div>
+        
+            <div class="center">RUBA</div>
+
             <ul>
                 <li class="logo">
-                    <a href="../../USUARIO/perfil/menu-perfil.html">
-                        <img src="../../fotos/foto perfil.jpg" alt="foto admin">
-                    </a>
+                    <div class="menu-desplegable">         
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
+                            <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
+                            <a href="../perfil/Registro.html">Registrarse</a>
+                            <a href="../perfil/Miperfil.html">Mi perfil </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -53,8 +58,8 @@
 
         <div class="panel">
             <h2>Accesos</h2>
-            <button><a href="../accesos/admin-pelis.html" target="_blank">ADMINISTRAR PELICULAS</a></button>
-            <button><a href="../accesos/admin-usuarios.html" target="_blank">ADMINISTRAR USUARIOS</a></button>
+            <button><a href="../accesos/admin de peliculas/admin-pelis.html" target="_blank">ADMINISTRAR PELICULAS</a></button>
+            <button><a href="../accesos/admin de usuarios/admin-usuarios.html" target="_blank">ADMINISTRAR USUARIOS</a></button>
         </div>
     </div>
 

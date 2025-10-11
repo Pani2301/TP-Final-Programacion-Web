@@ -9,7 +9,6 @@
   <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon"> 
 </head>
 <body>
-  <!-- Header -->
     <header>
         <nav class="menu">
             <ul>
@@ -25,8 +24,8 @@
             <ul>
                 <li class="logo">
                     <div class="menu-desplegable">         
-                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="myFunction()"class="dropbtn">
-                        <div id="myDropdown" class="contenido-menu">
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
                             <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
                             <a href="../perfil/Registro.html">Registrarse</a>
                             <a href="../perfil/Miperfil.html">Mi perfil </a>
@@ -38,57 +37,70 @@
     </header>
 
     
-  <!-- Contenedor del perfil -->
-  <main class="fondo-perfil">
-    <!-- Foto y nombre -->
-    <div class="perfil-info">
-      <img src="../../fotos/foto perfil.jpg" alt="Foto de perfil" class="perfil-foto">
-      <h2>Ignacio Fernández</h2>
-      <p class="perfil-email">ignacio@email.com</p>
-    </div>
+  	<main class="fondo-perfil">
+    	<div class="perfil-info">
+      		<img src="../../fotos/foto perfil.jpg" alt="Foto de perfil" class="perfil-foto">
+      		<h2>Ignacio Fernández</h2>
+      		<p class="perfil-email">ignacio@email.com</p>
+    	</div>
 
-    <!-- Datos de usuario -->
-    <div class="perfil-datos">
-      <h3>Mis datos</h3>
-      <ul>
-        <li><strong>Miembro desde:</strong> Enero 2023</li>
-        <li><strong>Preferencias:</strong> Ciencia ficción, acción</li>
-        <li><strong>Ubicación:</strong> Buenos Aires</li>
-      </ul>
-    </div>
+    	<div class="perfil-datos">
+      		<h3>Mis datos</h3>
+      		<ul>
+        		<li><strong>Miembro desde:</strong> Enero 2023</li>
+        		<li><strong>Preferencias:</strong> Ciencia ficción, acción</li>
+        		<li><strong>Ubicación:</strong> Buenos Aires</li>
+      		</ul>
+    	</div>
 
-    <!-- Historial -->
-    <div class="perfil-historial">
-      <h3>Historial de reservas</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Película</th>
-            <th>Fecha</th>
-            <th>Entradas</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Cómo entrenar a tu dragón</td>
-            <td>15/09/2025</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Superman</td>
-            <td>02/09/2025</td>
-            <td>1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
+    	<div class="perfil-historial">
+			<h3>Historial de reservas</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Película</th>
+						<th>Fecha</th>
+						<th>Entradas</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td>Cómo entrenar a tu dragón</td>
+						<td>15/09/2025</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>Superman</td>
+						<td>02/09/2025</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+    	</div>
+  	</main>
+
+	<form name="formMandarConsulta" onsubmit="return validarEnviarConsulta()">
+		<fieldset class="bordeo">
+			<h3>Enviar consulta o sugerencia</h3>
+			<div>
+				<label for="consulta">Consulta/Sugerencia:</label><br>
+				<textarea id="consulta" name="consulta" rows="4" cols="50" placeholder="Escribe tu consulta o sugerencia aquí..."></textarea>
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Cancelar">
+			</div>
+		</fieldset>
+	</form>
 
 
     <footer>
         <p>2025 RUBA. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="../../main.js"></script>
+<script src="../../main.js"></script>
+<script src="validar-consulta.js"></script>
 </body>
 </html>

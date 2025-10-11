@@ -4,12 +4,11 @@ h1 {
 
 .fotos-peliculas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* siempre 4 columnas */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin: 0 auto;
     max-width: 1200px;
 }
-
 
 .pelicula {
     background: white;
@@ -36,13 +35,13 @@ h1 {
 
 @media (max-width: 992px) {
     .fotos-peliculas {
-        grid-template-columns: 1fr 1fr 1fr; /* ✅ 3 columnas en tablets */
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en tablets */
     }
 }
 
 @media (max-width: 768px) {
     .fotos-peliculas {
-        grid-template-columns: 1fr 1fr; /* ✅ 2 columnas en celu grande */
+        grid-template-columns: 1fr 1fr; /* 2 columnas en celu grande */
     }
     .pelicula p {
         font-size: 14px;
@@ -51,6 +50,6 @@ h1 {
 
 @media (max-width: 425px) {
     .fotos-peliculas {
-        grid-template-columns: 1fr; /* ✅ 1 por fila en celu chico */
+        grid-template-columns: 1fr; /* 1 por fila en celu chico */
     }
 }

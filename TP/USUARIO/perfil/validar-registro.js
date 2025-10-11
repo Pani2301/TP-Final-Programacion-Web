@@ -57,25 +57,16 @@ function validarRegistro() {
     const fecha = form["fecha"];
     const correo = form["correo"];
 
-    // --- Validación del nombre ---
     if (!validarTexto(nombre.value) || nombre.value.length < 2) {
         alert("Ingrese un nombre válido (solo letras, mínimo 2 caracteres).");
         return false;
     }
 
-    // --- Validación del apellido ---
     if (!validarTexto(apellido.value) || apellido.value.length < 2) {
         alert("Ingrese un apellido válido (solo letras, mínimo 2 caracteres).");
         return false;
     }
 
-    // --- Validación de contraseña ---
-    if (!validarPassword(contrasena.value)) {
-        alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
-        return false;
-    }
-
-    // --- Validación de la fecha ---
     if (fecha.value === "") {
         alert("Por favor ingrese su fecha de nacimiento.");
         return false;
@@ -86,9 +77,13 @@ function validarRegistro() {
         return false;
     }
 
-    // --- Validación del correo ---
     if (!validarEmail(correo.value)) {
         alert("Ingrese un correo electrónico válido.");
+        return false;
+    }
+    
+    if (!validarPassword(contrasena.value)) {
+        alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
         return false;
     }
 

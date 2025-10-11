@@ -1,17 +1,15 @@
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+function alternarMenu() {
+  	document.getElementById("menu-desplegable").classList.toggle("mostrar");
 }
 
-// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+  	if (!event.target.matches('.boton-desplegable')) {
+    	var menus = document.getElementsByClassName("menu-contenido");
+    	for (var i = 0; i < menus.length; i++) {
+      		var menuAbierto = menus[i];
+      		if (menuAbierto.classList.contains('mostrar')) {
+        		menuAbierto.classList.remove('mostrar');
+			}
+    	}
+  	}
 }

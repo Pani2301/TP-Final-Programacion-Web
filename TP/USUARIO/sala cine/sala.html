@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sala de Cine</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="sala.css">
     <link rel="shortcut icon" href="../../fotos/logo RUBA.png" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <nav class="menu">
             <ul>
@@ -25,8 +24,8 @@
             <ul>
                 <li class="logo">
                     <div class="menu-desplegable">         
-                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="myFunction()"class="dropbtn">
-                        <div id="myDropdown" class="contenido-menu">
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
                             <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
                             <a href="../perfil/Registro.html">Registrarse</a>
                             <a href="../perfil/Miperfil.html">Mi perfil </a>
@@ -37,30 +36,10 @@
         </nav>
     </header>
 
-    <main class="sala">
+    <div class="sala">
         <h2>Sala de Cine</h2>
 
         <div class="recuadro">Pantalla</div>
-
-        <div class="seleccionar-fehca-hora">
-            <h3>Elegí fecha y horario</h3>
-            <label for="fecha">Fecha:</label>
-            <select id="fecha">
-                <option value="">-- Seleccionar fecha --</option>
-                <option value="2025-10-06">Lunes 6/10</option>
-                <option value="2025-10-07">Martes 7/10</option>
-                <option value="2025-10-08">Miércoles 8/10</option>
-            </select>
-
-        <label for="hora">Horario:</label>
-            <select id="hora">
-                <option value="">-- Seleccionar horario --</option>
-                <option value="18:00">18:00</option>
-                <option value="20:30">20:30</option>
-                <option value="22:45">22:45</option>
-        </select>
-        </div>
-
         
         <div class="butacas">
             <div class="fila">
@@ -164,15 +143,10 @@
         </div>
 
         <div class="confirmar-seleccion">
-            <button class="confirmar">Confirmar Selección</button>
+            <button class="confirmar" onclick="confirmaciondecompra()">Confirmar Selección</button>
         </div>
-    </main>
+    </div>
 
-    <footer>
-        <p>2025 RUBA. Todos los derechos reservados.</p>
-    </footer>
-    
-    <script src="sala.js"></script>
-    <script src="../../main.js"></script>
+<script src="seleccionar.js"></script>
 </body>
 </html>

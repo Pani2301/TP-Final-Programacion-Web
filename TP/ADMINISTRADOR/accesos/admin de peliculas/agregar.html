@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Agregar película - RUBA</title>
+	<link rel="stylesheet" href="../../../main.css"/>
+	<link rel="stylesheet" href="agregar.css">
+	<link rel="shortcut icon" href="../../../fotos/logo RUBA.png" type="image/x-icon" />
+</head>
+<body>
+	<header>
+        <nav class="menu">
+            <ul>
+                <li class="logo-ruba">
+                    <a href="../../USUARIO/cartelera/cartelera.html">
+                        <img src="../../../fotos/logo RUBA.png" alt="Logo RUBA">
+                    </a>
+                </li>
+            </ul>
+        
+            <div class="center">RUBA</div>
+
+            <ul>
+                <li class="logo">
+                    <div class="menu-desplegable">         
+                        <img src="../../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
+                            <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
+                            <a href="../perfil/Registro.html">Registrarse</a>
+                            <a href="../perfil/Miperfil.html">Mi perfil </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<h1>Agregar película</h1>
+
+<form name="formAgregar" onsubmit="return validarAgregar()">
+	<fieldset class="bordeo">
+		<div>
+			<label for="Titulo">Título:</label>
+			<input type="text" name="titulo" id="Titulo01"/>
+		</div>
+
+		<div>
+			<label for="Imagen">URL de imagen (jpg/png):</label>
+			<input type="text" name="imagen" id="Imagen01"/>
+		</div>
+
+		<div>
+			<label for="Resumen">Resumen:</label>
+			<textarea name="resumen" id="Resumen01" rows="4"></textarea>
+		</div>
+
+		<div>
+			<label for="Trailer">Link trailer (YouTube):</label>
+			<input type="text" name="trailer" id="Trailer01"/>
+		</div>
+	</fieldset>
+
+	<div>
+        <fieldset class="bordeo2">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+        </fieldset>
+    </div>
+</form>
+
+	<script src="agregar.js"></script>
+</body>
+</html>

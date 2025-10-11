@@ -73,12 +73,15 @@ input {
     margin-bottom: 5px;
 }
 
-.dropbtn {
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
+.boton-desplegable {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .menu-desplegable {
@@ -86,23 +89,25 @@ input {
     display: inline-block;
 }
 
-.contenido-menu {
+.menu-contenido {
     min-width: 160px;
     background-color: rgb(242, 234, 216);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     display: none;
     position: absolute;
-    right: 0; left: auto;
+    right: 0;
+    left: auto;
     margin-top: 10px;
+    z-index: 1000;
 }
 
-.contenido-menu a {
+.menu-contenido a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.show {
-    display:block;
+.mostrar {
+    display: block;
 }

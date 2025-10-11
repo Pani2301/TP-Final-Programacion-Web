@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADMINISTRAR PELICULAS</title>
+  <link rel="stylesheet" href="../../../main.css" />
+  <link rel="stylesheet" href="../../../USUARIO/cartelera/cartelera.css" />
+  <link rel="stylesheet" href="../admin.css">
+  <link rel="shortcut icon" href="../../../fotos/logo RUBA.png" type="image/x-icon" />
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <ul>
+                <li class="logo-ruba">
+                    <a href="../../USUARIO/cartelera/cartelera.html">
+                        <img src="../../../fotos/logo RUBA.png" alt="Logo RUBA">
+                    </a>
+                </li>
+            </ul>
+        
+            <div class="center">RUBA</div>
+
+            <ul>
+                <li class="logo">
+                    <div class="menu-desplegable">         
+                        <img src="../../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
+                            <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
+                            <a href="../perfil/Registro.html">Registrarse</a>
+                            <a href="../perfil/Miperfil.html">Mi perfil </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+<h1>CARTELERA - ADMIN</h1>
+
+	<div class="boton">
+		<a href="agregar.html"><button> + AGREGAR PELICULA</button></a>
+	</div>
+
+	<div class="fotos-peliculas">
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo1.jpg" alt="El Conjuro 4" />
+			<p>El Conjuro 4 <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo2.jpg" alt="Cómo entrenar a tu dragón" />
+			<p>Cómo entrenar a tu dragón <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo3.jpg" alt="F1 La Película" />
+			<p>F1 La Película <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo4.jpg" alt="Jurassic World Renace" />
+			<p>Jurassic World Renace <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo5.jpg" alt="Superman" />
+			<p>Superman <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo6.jpg" alt="Haz que regrese" />
+			<p>Haz que regrese <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo7.jpg" alt="Nadie 2" />
+			<p>Nadie 2 <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+		<div class="pelicula">
+			<img src="../../../fotos/foto-titulo8.jpg" alt="La hora de la desaparición" />
+			<p>La hora de la desaparición <button onclick="eliminarPelicula(this)">ELIMINAR</button></p>
+		</div>
+
+	</div>
+
+	<footer>
+		<p>2025 RUBA. Todos los derechos reservados.</p>
+	</footer>
+
+
+  
+<script src="admin.js"></script>
+</body>
+</html>

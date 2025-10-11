@@ -24,8 +24,8 @@
             <ul>
                 <li class="logo">
                     <div class="menu-desplegable">         
-                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="myFunction()"class="dropbtn">
-                        <div id="myDropdown" class="contenido-menu">
+                        <img src="../../fotos/foto perfil.jpg" alt="foto de perfil" onclick="alternarMenu()" class="boton-desplegable">
+                        <div id="menu-desplegable" class="menu-contenido">
                             <a href="../perfil/iniciosesion.html">Inicio Sesion</a>
                             <a href="../perfil/Registro.html">Registrarse</a>
                             <a href="../perfil/Miperfil.html">Mi perfil </a>
@@ -39,26 +39,27 @@
     <h2>Inicio De sesion</h2>
 
    <div class="centrar">
-        <form name="formInicioSesion" onsubmit="return validarInicioSesion()">
+        <form name="formInicio" onsubmit="return validarInicioSesion()">
             <fieldset class="bordeo">
-            <div class="campo">
-                <label  for="nom">Email:</label>
-                <input  type="text" name="nombre" id="nom01" >
+            <div>
+                <label for="Correo Electronico">Correo Electronico: </label>
+                <input type="text" name="correo" id="correo01" >
             </div>
 
-            <div class="campo">
-                <label  for="nom">Contraseña:</label>
-                <input  type="password" name="nombre" id="nom01" >    
+            <div>
+                <label for="con">Contraseña: </label>
+                <input type="password" name="contrasena" id="con" >
             </div>
 
             </fieldset>
 
-        <div > 
-            <fieldset class="bordeo2">                      
-                <input type="submit"  value="Enviar">
-                <input type="reset" value="Cancelar">
-            </fieldset> 
-        </div>
+            <div>
+                <fieldset class="bordeo2">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Cancelar">
+                </fieldset>
+            </div>
+        </form>
 
 
     <footer>

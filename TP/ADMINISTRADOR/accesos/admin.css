@@ -1,0 +1,58 @@
+h1 {
+	color: yellow;
+	margin-top: 30px;
+	text-align: center;
+}
+
+button {
+	background-color: red;
+	padding: 10px;
+	border-radius: 40px;
+	text-decoration: solid;
+	font-weight: 900;
+}
+
+a {
+	color: black;
+}
+
+.usuarios {
+	background-color: #ffffff;
+	border: 2px solid #ddd;
+	border-radius: 12px;
+	padding: 20px;
+	margin: 15px auto;
+	max-width: 800px;
+	text-align: left;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+	transition: 0.2s ease-in-out;
+}
+
+.ver {
+    background-color: #326273;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .fotos-peliculas {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .fotos-peliculas {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en celu grande */
+    }
+    .pelicula p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    .fotos-peliculas {
+        grid-template-columns: 1fr; /* 1 por fila en celu chico */
+    }
+}
