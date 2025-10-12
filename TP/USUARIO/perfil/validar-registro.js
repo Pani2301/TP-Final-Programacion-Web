@@ -58,51 +58,51 @@ function validarRegistro() {
     const correo = form["correo"];
 
     if (!validarTexto(nombre.value) || nombre.value.length < 2) {
-        nombre.style.borderColor = "red";
+        nombre.style.backgroundColor = "lightcoral";
         alert("Ingrese un nombre válido (solo letras, mínimo 2 caracteres).");
         return false;
     } else {
-        nombre.style.borderColor = "";
+        nombre.style.backgroundColor = "";
     }
 
     if (!validarTexto(apellido.value) || apellido.value.length < 2) {
-        apellido.style.borderColor = "red";
+        apellido.style.backgroundColor = "lightcoral";
         alert("Ingrese un apellido válido (solo letras, mínimo 2 caracteres).");
         return false;
     } else {
-        apellido.style.borderColor = "";
+        apellido.style.backgroundColor = "";
     }
 
     if (fecha.value === "") {
-        fecha.style.borderColor = "red";
+        fecha.style.backgroundColor = "lightcoral";
         alert("Por favor ingrese su fecha de nacimiento.");
         return false;
     } else {
-        fecha.style.borderColor = "";
+        fecha.style.backgroundColor = "";
     }
 
     if (calcularEdad(fecha.value) < 12) {
-        fecha.style.borderColor = "red";
+        fecha.style.backgroundColor = "lightcoral";
         alert("Debe tener al menos 12 años para registrarse.");
         return false;
     } else {
-        fecha.style.borderColor = "";
+        fecha.style.backgroundColor = "";
     }
 
     if (!validarEmail(correo.value)) {
-        correo.style.borderColor = "red";
+        correo.style.backgroundColor = "lightcoral";
         alert("Ingrese un correo electrónico válido.");
         return false;
     } else {
-        correo.style.borderColor = "";
+        correo.style.backgroundColor = "";
     }
     
     if (!validarPassword(contrasena.value)) {
-        contrasena.style.borderColor = "red";
+        contrasena.style.backgroundColor = "lightcoral";
         alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
         return false;
     } else {
-        contrasena.style.borderColor = "";
+        contrasena.style.backgroundColor = "";
     }
 
     alert("Registro completado correctamente.");

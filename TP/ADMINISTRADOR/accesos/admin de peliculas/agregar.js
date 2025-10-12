@@ -32,35 +32,35 @@ function validarAgregar() {
     const trailer = form["trailer"];
 
     if (!validarTexto(titulo.value)) {
-        titulo.style.borderColor = "red";
+        titulo.style.backgroundColor = "lightcoral";
         alert("Ingrese un título válido.");
         return false;
     } else {
-        titulo.style.borderColor = "";
+        titulo.style.backgroundColor = "";
     }
 
     if (!validarImagen(imagen.value)) {
-        imagen.style.borderColor = "red";
+        imagen.style.backgroundColor = "lightcoral";
         alert("Ingrese una URL de imagen válida.");
         return false;
     } else {
-        imagen.style.borderColor = "";
+        imagen.style.backgroundColor = "";
     }
 
     if (!validarTexto(resumen.value)) {
-        resumen.style.borderColor = "red";
+        resumen.style.backgroundColor = "lightcoral";
         alert("Ingrese un resumen válido.");
         return false;
     } else {
-        resumen.style.borderColor = "";
+        resumen.style.backgroundColor = "";
     }
 
     if (!validarTrailer(trailer.value)) {
-        trailer.style.borderColor = "red";
+        trailer.style.backgroundColor = "lightcoral";
         alert("Ingrese una URL de trailer válida.");
         return false;
     } else {
-        trailer.style.borderColor = "";
+        trailer.style.backgroundColor = "";
     }
 
     alert("Película agregada con éxito.");

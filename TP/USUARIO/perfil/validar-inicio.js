@@ -36,20 +36,20 @@ function validarInicioSesion() {
     const correo = form["correo"];
     const contrasena = form["contrasena"];
 
-    if (!validarEmail(correo.value)) {
-        correo.style.borderColor = "red";
-        alert("Ingrese un correo electrónico válido.");
-    return false;
-    } else {
-        correo.style.borderColor = "";
+        if (!validarEmail(correo.value)) {
+            correo.style.backgroundColor = "lightcoral";
+            alert("Ingrese un correo electrónico válido.");
+        return false;
+        } else {
+            correo.style.backgroundColor = "";
     }
 
-    if (!validarPassword(contrasena.value)) {
-        contrasena.style.borderColor = "red";
-        alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
-    return false;
-    } else {
-        contrasena.style.borderColor = "";
+        if (!validarPassword(contrasena.value)) {
+            contrasena.style.backgroundColor = "lightcoral";
+            alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
+        return false;
+        } else {
+            contrasena.style.backgroundColor = "";
     }
 
     alert("Inicio de sesión exitoso.");

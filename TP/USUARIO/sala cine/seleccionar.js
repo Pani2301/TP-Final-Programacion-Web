@@ -52,20 +52,20 @@ function validarFormularioFechayHora(){
 	const fecha = form["fecha"];
 	const hora = form["hora"];
 
-	if (validarFechaSeleccionada(fecha.value)) {
-		fecha.style.borderColor = "red";
-		alert("Por favor, seleccione una fecha.");
-		return false;
-	} else {
-    fecha.style.borderColor = "";
+  if (validarFechaSeleccionada(fecha.value)) {
+    fecha.style.backgroundColor = "lightcoral";
+    alert("Por favor, seleccione una fecha.");
+    return false;
+  } else {
+    fecha.style.backgroundColor = "";
   	}
 
-	if (validarHoraSeleccionada(hora.value)) {
-		hora.style.borderColor = "red";
-		alert("Por favor, seleccione una hora.");
-		return false;
-	} else {
-    hora.style.borderColor = "";
+  if (validarHoraSeleccionada(hora.value)) {
+    hora.style.backgroundColor = "lightcoral";
+    alert("Por favor, seleccione una hora.");
+    return false;
+  } else {
+    hora.style.backgroundColor = "";
   	}
 
 	alert("Fecha y hora seleccionadas con éxito.");
