@@ -32,23 +32,35 @@ function validarAgregar() {
     const trailer = form["trailer"];
 
     if (!validarTexto(titulo.value)) {
+        titulo.style.borderColor = "red";
         alert("Ingrese un título válido.");
         return false;
+    } else {
+        titulo.style.borderColor = "";
     }
 
     if (!validarImagen(imagen.value)) {
+        imagen.style.borderColor = "red";
         alert("Ingrese una URL de imagen válida.");
         return false;
+    } else {
+        imagen.style.borderColor = "";
     }
 
     if (!validarTexto(resumen.value)) {
+        resumen.style.borderColor = "red";
         alert("Ingrese un resumen válido.");
         return false;
+    } else {
+        resumen.style.borderColor = "";
     }
 
     if (!validarTrailer(trailer.value)) {
+        trailer.style.borderColor = "red";
         alert("Ingrese una URL de trailer válida.");
         return false;
+    } else {
+        trailer.style.borderColor = "";
     }
 
     alert("Película agregada con éxito.");

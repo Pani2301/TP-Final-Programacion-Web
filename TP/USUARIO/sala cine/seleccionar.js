@@ -53,14 +53,20 @@ function validarFormularioFechayHora(){
 	const hora = form["hora"];
 
 	if (validarFechaSeleccionada(fecha.value)) {
+		fecha.style.borderColor = "red";
 		alert("Por favor, seleccione una fecha.");
 		return false;
-	}
+	} else {
+    fecha.style.borderColor = "";
+  	}
 
 	if (validarHoraSeleccionada(hora.value)) {
+		hora.style.borderColor = "red";
 		alert("Por favor, seleccione una hora.");
 		return false;
-	}
+	} else {
+    hora.style.borderColor = "";
+  	}
 
 	alert("Fecha y hora seleccionadas con éxito.");
 	window.location.href = "sala.html";

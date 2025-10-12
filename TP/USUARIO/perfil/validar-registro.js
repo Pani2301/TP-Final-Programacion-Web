@@ -58,33 +58,51 @@ function validarRegistro() {
     const correo = form["correo"];
 
     if (!validarTexto(nombre.value) || nombre.value.length < 2) {
+        nombre.style.borderColor = "red";
         alert("Ingrese un nombre válido (solo letras, mínimo 2 caracteres).");
         return false;
+    } else {
+        nombre.style.borderColor = "";
     }
 
     if (!validarTexto(apellido.value) || apellido.value.length < 2) {
+        apellido.style.borderColor = "red";
         alert("Ingrese un apellido válido (solo letras, mínimo 2 caracteres).");
         return false;
+    } else {
+        apellido.style.borderColor = "";
     }
 
     if (fecha.value === "") {
+        fecha.style.borderColor = "red";
         alert("Por favor ingrese su fecha de nacimiento.");
         return false;
+    } else {
+        fecha.style.borderColor = "";
     }
 
     if (calcularEdad(fecha.value) < 12) {
+        fecha.style.borderColor = "red";
         alert("Debe tener al menos 12 años para registrarse.");
         return false;
+    } else {
+        fecha.style.borderColor = "";
     }
 
     if (!validarEmail(correo.value)) {
+        correo.style.borderColor = "red";
         alert("Ingrese un correo electrónico válido.");
         return false;
+    } else {
+        correo.style.borderColor = "";
     }
     
     if (!validarPassword(contrasena.value)) {
+        contrasena.style.borderColor = "red";
         alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
         return false;
+    } else {
+        contrasena.style.borderColor = "";
     }
 
     alert("Registro completado correctamente.");
