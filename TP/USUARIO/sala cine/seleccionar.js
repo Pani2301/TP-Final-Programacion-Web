@@ -1,10 +1,3 @@
-function confirmaciondecompra(){
-	alert("¡Gracias por su compra! Disfrute la película.");
-	window.location.href = "../../USUARIO/cartelera/cartelera.html";
-	return true;
-}
-
-
 function validarFechaSeleccionada() {
   let arg;
 
@@ -74,32 +67,3 @@ function validarFormularioFechayHora(){
 }
 
 
-// Esta función se ejecuta cuando el HTML ya cargó
-function iniciarSeleccionDeButacas() {
-
-  // Paso 1: obtener todas las butacas
-  const butacas = document.querySelectorAll('.butaca');
-
-  // Paso 2: recorrerlas con un bucle for
-  for (let i = 0; i < butacas.length; i++) {
-    const butaca = butacas[i];
-
-    // Paso 3: agregar un evento click a cada butaca
-    butaca.addEventListener('click', manejarClickButaca);
-  }
-}
-
-// Esta función se ejecuta cuando se hace clic en una butaca
-function manejarClickButaca() {
-
-  // "this" hace referencia a la butaca en la que se hizo clic
-  if (this.classList.contains('ocupada')) {
-    return; // si está ocupada, no hace nada
-  }
-
-  // Alterna la clase "seleccionada"
-  this.classList.toggle('seleccionada');
-}
-
-// Paso 4: esperar a que el HTML esté listo para iniciar
-document.addEventListener('DOMContentLoaded', iniciarSeleccionDeButacas);
