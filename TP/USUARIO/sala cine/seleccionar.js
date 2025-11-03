@@ -1,69 +1,46 @@
-function validarFechaSeleccionada() {
-  let arg;
-
-  if (arguments.length > 0) {
-    arg = arguments[0];  // Si se pasó un argumento, lo guardo en arg
-  } else {
-    arg = undefined;     // Si no se pasó nada, lo dejo indefinido
-  }
-
-  let valor = '';
-
-  if (typeof arg === 'string') {
-    valor = arg;  // Si el argumento es directamente un string
-  } else if (arg && typeof arg.value !== 'undefined') {
-    valor = String(arg.value);  // Si es un input o algo con propiedad .value
-  }
-
-  return valor.trim() === '';  // Devuelve true si está vacío
+function estaVacio(valor) {
+  return valor == null || String(valor).trim() === "";
 }
 
-
-function validarHoraSeleccionada() {
-  let arg;
-
-  if (arguments.length > 0) {
-    arg = arguments[0];  // Si se pasó un argumento, lo guardo en arg
+function marcarError(el, tieneError) {
+  if (tieneError) {
+    el.style.backgroundColor = "lightcoral";
   } else {
-    arg = undefined;     // Si no se pasó nada, lo dejo indefinido
+    el.style.backgroundColor = "";
   }
-
-  let valor = '';
-
-  if (typeof arg === 'string') {
-    valor = arg;  // Si el argumento es directamente un string
-  } else if (arg && typeof arg.value !== 'undefined') {
-    valor = String(arg.value);  // Si es un input o algo con propiedad .value
-  }
-
-  return valor.trim() === '';  // Devuelve true si está vacío
 }
 
+function validarFormularioFechayHora() {
+  const fechaSelect = document.getElementById("fecha");
+  const horaSelect = document.getElementById("hora");
 
-function validarFormularioFechayHora(){
-	const form = document.forms["formFechaHora"];
-	const fecha = form["fecha"];
-	const hora = form["hora"];
+  let valido = true;
 
-  if (validarFechaSeleccionada(fecha.value)) {
-    fecha.style.backgroundColor = "lightcoral";
-    alert("Por favor, seleccione una fecha.");
+  // Validar FECHA
+  if (estaVacio(fechaSelect.value)) {
+    marcarError(fechaSelect, true);
+    alert("Por favor, seleccioná una fecha.");
+    valido = false;
+  } else {
+    marcarError(fechaSelect, false);
+  }
+
+  // Validar HORA
+  if (estaVacio(horaSelect.value)) {
+    marcarError(horaSelect, true);
+    alert("Por favor, seleccioná un horario.");
+    valido = false;
+  } else {
+    marcarError(horaSelect, false);
+  }
+
+
+  if (!valido) {
     return false;
-  } else {
-    fecha.style.backgroundColor = "";
-  	}
+  }
 
-  if (validarHoraSeleccionada(hora.value)) {
-    hora.style.backgroundColor = "lightcoral";
-    alert("Por favor, seleccione una hora.");
-    return false;
-  } else {
-    hora.style.backgroundColor = "";
-  	}
 
-	alert("Fecha y hora seleccionadas con éxito.");
-	window.location.href = "sala.html";
-	return false;
+  alert("Fecha y hora seleccionadas con éxito.");
+  window.location.href = "sala.html"; 
+  return false; 
 }
-
-

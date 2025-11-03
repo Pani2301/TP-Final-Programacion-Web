@@ -1,9 +1,9 @@
-// Verifica que un valor no esté vacío
+
 function validarNoVacio(valor) {
     return valor.trim() !== "";
 }
 
-// Verifica que un texto contenga solo letras (mayúsculas, minúsculas o acentos)
+
 function validarTexto(valor) {
     for (let c of valor) {
         if (!((c >= "A" && c <= "Z") || (c >= "a" && c <= "z") || (c === " ") || ("áéíóúÁÉÍÓÚñÑ".includes(c)))) {
@@ -13,7 +13,7 @@ function validarTexto(valor) {
   return valor.trim().length > 0;
 }
 
-// Verifica que el email contenga al menos un "@" y un "."
+
 function validarEmail(valor) {
     if (valor.includes("@") && valor.includes(".")) {
         return true;
@@ -22,7 +22,7 @@ function validarEmail(valor) {
     }
 }
 
-// Verifica que la contraseña tenga al menos una letra, un número y 8 caracteres
+
 function validarPassword(valor) {
     if (valor.length < 8) {
         return false;
@@ -39,17 +39,16 @@ function validarPassword(valor) {
     return tieneLetra && tieneNumero;
 }
 
-// Calcula la edad solo según el año de nacimiento
+
 function calcularEdad(fechaNacimiento) {
-    const hoy = new Date(); // Fecha actual
-    const nacimiento = new Date(fechaNacimiento); // Fecha de nacimiento
+    const hoy = new Date(); 
+    const nacimiento = new Date(fechaNacimiento); 
     const edad = hoy.getFullYear() - nacimiento.getFullYear();
     return edad;
 }
 
-// --- Validación principal del formulario ---
+
 function validarRegistro() {
-// Obtiene el formulario y los campos por su "name"
     const form = document.forms["formRegistro"];
     const nombre = form["nombre"];
     const apellido = form["apellido"];

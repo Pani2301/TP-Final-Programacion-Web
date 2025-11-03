@@ -2,7 +2,7 @@ function validarNoVacio(valor) {
     return valor.trim() !== "";
 }
 
-// Verifica que el email contenga al menos un "@" y un "."
+
 function validarEmail(valor) {
     if (valor.includes("@") && valor.includes(".")) {
         return true;
@@ -11,7 +11,7 @@ function validarEmail(valor) {
     }
 }
 
-// Verifica que la contraseña tenga al menos una letra, un número y 8 caracteres
+
 function validarPassword(valor) {
     if (valor.length < 8) {
         return false;
@@ -29,8 +29,8 @@ function validarPassword(valor) {
     return tieneLetra && tieneNumero;
 }
 
-// --- Validación principal del formulario de inicio de sesión ---
-// Obtiene los elementos del formulario por su name
+
+
 function validarInicioSesion() {
     const form = document.forms["formInicio"];
     const correo = form["correo"];
