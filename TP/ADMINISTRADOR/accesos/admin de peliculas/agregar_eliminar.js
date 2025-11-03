@@ -1,3 +1,4 @@
+// funciona para validar que el texto solo contenga letras y espacios
 function validarTexto(valor) {
     for (let c of valor) {
         if (!((c >= "A" && c <= "Z") || (c >= "a" && c <= "z") || (c === " ") || ("áéíóúÁÉÍÓÚñÑ".includes(c)))) {
@@ -7,7 +8,7 @@ function validarTexto(valor) {
   return valor.trim().length > 0;
 }
 
-
+// funciona para validar la URL de una imagen (termina en .jpg, .jpeg, .png, .gif)
 function validarImagen(value) {
     if (!value) return false;
     value = value.trim();
@@ -16,6 +17,7 @@ function validarImagen(value) {
     return lower.endsWith('.jpg') || lower.endsWith('.jpeg') || lower.endsWith('.png') || lower.endsWith('.gif');
 }
 
+// funciona para validar la URL de un trailer (debe contener youtube.com o youtu.be)
 function validarTrailer(value) {
     if (!value) return false;
     value = value.trim();
@@ -24,6 +26,7 @@ function validarTrailer(value) {
     return lower.includes('youtube.com') || lower.includes('youtu.be');
 }
 
+// Función principal para validar el formulario de agregar película
 function validarAgregar() {
     const form = document.forms["formAgregar"];
     const titulo = form["titulo"];
@@ -66,4 +69,10 @@ function validarAgregar() {
     alert("Película agregada con éxito.");
     window.location.href = "admin-pelis.html";
     return false;
+}
+
+// Función para eliminar una película
+function eliminarPelicula(boton) {
+    const pelicula = boton.closest(".pelicula");
+    pelicula.remove();
 }
