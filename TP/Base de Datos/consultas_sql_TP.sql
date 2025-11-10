@@ -112,4 +112,3 @@ INSERT INTO `consultas`
 (id, `id_usuario`, `mensaje`, `hora`)
 VALUES
 (NULL, 2, 'Tengo muchas ganas de ver la pelicula', '2024-06-30 10:00:00');
-

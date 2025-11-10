@@ -33,40 +33,47 @@ function validarAgregar() {
     const imagen = form["imagen"];
     const resumen = form["resumen"];
     const trailer = form["trailer"];
+    const mensajeError = document.getElementById("mensaje-error");
+
+    mensajeError.textContent = "";
+
+
 
     if (!validarTexto(titulo.value)) {
-        titulo.style.backgroundColor = "lightcoral";
-        alert("Ingrese un título válido.");
+        titulo.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un título válido.";
         return false;
     } else {
-        titulo.style.backgroundColor = "";
+        titulo.style.borderColor = "";
     }
 
     if (!validarImagen(imagen.value)) {
-        imagen.style.backgroundColor = "lightcoral";
-        alert("Ingrese una URL de imagen válida.");
+        imagen.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese una URL de imagen válida.";
         return false;
     } else {
-        imagen.style.backgroundColor = "";
+        imagen.style.borderColor = "";
     }
 
     if (!validarTexto(resumen.value)) {
-        resumen.style.backgroundColor = "lightcoral";
-        alert("Ingrese un resumen válido.");
+        resumen.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un resumen válido.";
         return false;
     } else {
-        resumen.style.backgroundColor = "";
+        resumen.style.borderColor = "";
     }
 
     if (!validarTrailer(trailer.value)) {
-        trailer.style.backgroundColor = "lightcoral";
-        alert("Ingrese una URL de trailer válida.");
+        trailer.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese una URL de trailer válida.";
         return false;
     } else {
-        trailer.style.backgroundColor = "";
+        trailer.style.borderColor = "";
     }
 
-    alert("Película agregada con éxito.");
+
+    mensajeError.style.color = "green";
+    mensajeError.textContent = "Película agregada con éxito.";
     window.location.href = "admin-pelis.html";
     return false;
 }

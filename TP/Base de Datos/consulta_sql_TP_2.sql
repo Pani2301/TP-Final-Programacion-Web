@@ -65,3 +65,12 @@ SELECT usuario.id, usuario.nombre, usuario.apellido
 FROM usuario
 LEFT JOIN compra ON usuario.id = compra.id_usuario
 WHERE compra.id IS NULL;
+
+
+-- 13 (Cantidad de butacas seleccionadas por cada usuario)
+SELECT usuario.nombre, COUNT(entrada.id) as Cantidad_de_butacas FROM entrada
+INNER JOIN compra ON entrada.id_compra = compra.id
+INNER JOIN usuario ON compra.id_usuario = usuario.id
+GROUP BY usuario.id
+HAVING cantidad_de_butacas > 3
+ORDER BY cantidad_de_butacas DESC;

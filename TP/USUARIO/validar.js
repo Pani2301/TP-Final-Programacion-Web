@@ -50,9 +50,9 @@ function estaVacio(valor) {
 // funcion para marcar un campo con error (fondo rojo) o quitar el error
 function marcarError(el, tieneError) {
     if (tieneError) {
-        el.style.backgroundColor = "lightcoral";
+        el.style.borderColor = "red";
     } else {
-        el.style.backgroundColor = "";
+        el.style.borderColor = "";
     }
 }
 
@@ -63,61 +63,68 @@ function validarRegistro() {
     const nombre = form["nombre"];
     const apellido = form["apellido"];
     const contrasena = form["contrasena"];
-    const fecha = form["fecha"];
+    const fecha = form["fch01"]; // ← corregido
     const correo = form["correo"];
-    
+    const mensajeError = document.getElementById("mensaje-error"); // ← agregado
+
+    // limpiar mensaje previo
+    mensajeError.style.color = "red";
+    mensajeError.textContent = "";
+
     if (!validarTexto(nombre.value) || nombre.value.length < 2) {
-        nombre.style.backgroundColor = "lightcoral";
-        alert("Ingrese un nombre válido (solo letras, mínimo 2 caracteres).");
+        nombre.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un nombre válido (solo letras, mínimo 2 caracteres).";
         return false;
     } else {
-        nombre.style.backgroundColor = "";
+        nombre.style.borderColor = "";
     }
 
     if (!validarTexto(apellido.value) || apellido.value.length < 2) {
-        apellido.style.backgroundColor = "lightcoral";
-        alert("Ingrese un apellido válido (solo letras, mínimo 2 caracteres).");
+        apellido.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un apellido válido (solo letras, mínimo 2 caracteres).";
         return false;
     } else {
-        apellido.style.backgroundColor = "";
+        apellido.style.borderColor = "";
     }
 
     if (fecha.value === "") {
-        fecha.style.backgroundColor = "lightcoral";
-        alert("Por favor ingrese su fecha de nacimiento.");
+        fecha.style.borderColor = "red";
+        mensajeError.textContent = "Por favor ingrese su fecha de nacimiento.";
         return false;
     } else {
-        fecha.style.backgroundColor = "";
+        fecha.style.borderColor = "";
     }
 
     if (calcularEdad(fecha.value) < 12) {
-        fecha.style.backgroundColor = "lightcoral";
-        alert("Debe tener al menos 12 años para registrarse.");
+        fecha.style.borderColor = "red";
+        mensajeError.textContent = "Debe tener al menos 12 años para registrarse.";
         return false;
     } else {
-        fecha.style.backgroundColor = "";
+        fecha.style.borderColor = "";
     }
 
     if (!validarEmail(correo.value)) {
-        correo.style.backgroundColor = "lightcoral";
-        alert("Ingrese un correo electrónico válido.");
+        correo.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un correo electrónico válido.";
         return false;
     } else {
-        correo.style.backgroundColor = "";
+        correo.style.borderColor = "";
     }
     
     if (!validarPassword(contrasena.value)) {
-        contrasena.style.backgroundColor = "lightcoral";
-        alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
+        contrasena.style.borderColor = "red";
+        mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres, una letra y un número.";
         return false;
     } else {
-        contrasena.style.backgroundColor = "";
+        contrasena.style.borderColor = "";
     }
 
-    alert("Registro completado correctamente.");
+    mensajeError.style.color = "green";
+    mensajeError.textContent = "Registro completado correctamente.";
     window.location.href = "../../USUARIO/cartelera/cartelera.html";
     return false;
 }
+
 
 
 // funcion principal para validar el formulario de inicio de sesion
@@ -125,41 +132,56 @@ function validarInicioSesion() {
     const form = document.forms["formInicio"];
     const correo = form["correo"];
     const contrasena = form["contrasena"];
+    const mensajeError = document.getElementById("mensaje-error");
 
-        if (!validarEmail(correo.value)) {
-            correo.style.backgroundColor = "lightcoral";
-            alert("Ingrese un correo electrónico válido.");
+    // limpiar mensaje previo
+    mensajeError.textContent = "";
+
+    if (!validarEmail(correo.value)) {
+        correo.style.borderColor = "red";
+        mensajeError.textContent = "Ingrese un correo electrónico válido.";
         return false;
-        } else {
-            correo.style.backgroundColor = "";
+    } else {
+        correo.style.borderColor = "";
     }
 
-        if (!validarPassword(contrasena.value)) {
-            contrasena.style.backgroundColor = "lightcoral";
-            alert("La contraseña debe tener al menos 8 caracteres, una letra y un número.");
+    if (!validarPassword(contrasena.value)) {
+        contrasena.style.borderColor = "red";
+        mensajeError.textContent = "La contraseña debe tener al menos 8 caracteres, una letra y un número.";
         return false;
-        } else {
-            contrasena.style.backgroundColor = "";
+    } else {
+        contrasena.style.borderColor = "";
     }
 
-    alert("Inicio de sesión exitoso.");
+    // mensaje de éxito (si querés mostrarlo en verde)
+    mensajeError.style.color = "green";
+    mensajeError.textContent = "Inicio de sesión exitoso.";
+
     window.location.href = "../../USUARIO/cartelera/cartelera.html";
     return false;
 }
 
 
+
 // funcion para validar el formulario de contacto/consulta
 function validarEnviarConsulta() {
     const consulta = document.forms["formMandarConsulta"]["consulta"].value;
+    const mensajeError = document.getElementById("mensaje-error");
+
+    // limpiar mensaje previo
+    mensajeError.textContent = "";
+
     if (consulta.length < 10) {
-        document.forms["formMandarConsulta"]["consulta"].style.backgroundColor = "lightcoral";
-        alert("Por favor, ingrese una consulta válida (mínimo 10 caracteres).");
+        document.forms["formMandarConsulta"]["consulta"].style.borderColor = "red";
+        mensajeError.textContent = "Por favor, ingrese una consulta válida (mínimo 10 caracteres).";
         return false;
     } else {
-        document.forms["formMandarConsulta"]["consulta"].style.backgroundColor = "";
+        document.forms["formMandarConsulta"]["consulta"].style.borderColor = "";
     }
 
-    alert("Consulta enviada con éxito.");
+
+    mensajeError.style.color = "green";
+    mensajeError.textContent = "Consulta enviada con éxito.";
     return true;
 }
 
@@ -168,13 +190,14 @@ function validarEnviarConsulta() {
 function validarFormularioFechayHora() {
     const fechaSelect = document.getElementById("fecha");
     const horaSelect = document.getElementById("hora");
+    const mensajeError = document.getElementById("mensaje-error");
 
     let valido = true;
 
     // Validar FECHA
     if (estaVacio(fechaSelect.value)) {
         marcarError(fechaSelect, true);
-        alert("Por favor, seleccioná una fecha.");
+        mensajeError.textContent = "Por favor, seleccioná una fecha.";
         valido = false;
     } else {
         marcarError(fechaSelect, false);
@@ -183,19 +206,19 @@ function validarFormularioFechayHora() {
     // Validar HORA
     if (estaVacio(horaSelect.value)) {
         marcarError(horaSelect, true);
-        alert("Por favor, seleccioná un horario.");
+        mensajeError.textContent = "Por favor, seleccioná un horario.";
         valido = false;
     } else {
         marcarError(horaSelect, false);
     }
 
 
-    if (!valido) {
-        return false;
+    if (valido) {
+        mensajeError.style.color = "green";
+        mensajeError.textContent = "Fecha y hora seleccionadas con éxito.";
+        window.location.href = "sala.html"; 
     }
+    
 
-
-    alert("Fecha y hora seleccionadas con éxito.");
-    window.location.href = "sala.html"; 
-    return false; 
+    return false;
 }

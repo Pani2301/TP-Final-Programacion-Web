@@ -68,3 +68,9 @@ textarea {
 div {
     margin: 10px;
 }
+
+#mensaje-error {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
